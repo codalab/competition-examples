@@ -48,7 +48,7 @@ def make_figure(scores):
     x = get_dataset_names()
     y = [scores[dataset] for dataset in x]
     fig, ax = plt.subplots()
-    ax.plot(x, y, 'bo')
+    ax.bar(x, y)
     ax.set_ylabel('accuracy')
     ax.set_title('Submission results')
     return fig
