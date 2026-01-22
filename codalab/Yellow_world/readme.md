@@ -41,7 +41,7 @@ overview.html
 terms_and_conditions.html
 ```
 
-The [YAML file is the configuration file](https://github.com/codalab/competition-examples/blob/master/basic-competition-bundles/Yellow_world/yellow_world_competition_bundle/competition.yaml). It consist in a number of `attribute: value` pairs. For a full list of attributes, see the [Codalab competition YAML definition language](Organizer_Codalab-competition-YAML-definition-language).
+The [YAML file is the configuration file](https://github.com/codalab/competition-examples/blob/master/basic-competition-bundles/Yellow_world/yellow_world_competition_bundle/competition.yaml). It consist in a number of `attribute: value` pairs. For a full list of attributes, see the [Codalab competition YAML definition language](https://github.com/codalab/codalab-competitions/wiki/Organizer_Codalab-competition-YAML-definition-language).
 
 1. **First section**: general settings and HTML pages
 ```
