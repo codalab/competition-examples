@@ -7,6 +7,8 @@ into one of three classifications.
 
 ### Bundles
 
+You can find here 3 different example competitions:
+
 - Results submission (scoring program only)
 - Code submission (ingestion program + scoring program)
 - Ingestion during scoring, running simultaneously

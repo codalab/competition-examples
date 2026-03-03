@@ -1,9 +1,12 @@
+# Main settings of the competition
 version: 2
 title: Classify Wheat Seeds (result submission)
 description: Classification of wheat seeds into three classes based on seven dimensions of data
 image: wheat.jpg
 registration_auto_approve: True  # do not require approval from admin to join the comp
+docker_image: codalab/codalab-legacy:py39 # the Docker image in which submissions are run
 
+# Documentation pages accessible by the participants
 terms: pages/terms.md
 pages:
   - title: Participation
@@ -13,48 +16,65 @@ pages:
   - title: Timeline
     file: pages/timeline.md
 
+# In this competition, a task consists in a reference data (ground truth) and a scoring program.
+# The scoring program takes participants' submissions (predictions) and compare it to the reference data.
+# You can edit the scoring program to compute any metric or evaluation procedure.
 tasks:
   - index: 0
     name: Wheat Seed Developement Task
     description: 'Tune models to 117 items, test against the 40 items contained in public test data'
-    input_data: dev_phase/input_data/
     reference_data: dev_phase/reference_data/
     scoring_program: scoring_program/
   - index: 1
     name: Wheat Seed Final Task
     description: 'Train models with 117 items, test against an unseen set of 53 items'
-    input_data: final_phase/input_data/
     reference_data: final_phase/reference_data/
     scoring_program: scoring_program/
 
+# Solution is actually an example submission
+# You can use only the starting kit instead
 solutions:
   - index: 0
     tasks:
     - 0
+    path: solution/feedback_solution
+  - index: 1
+    tasks:
     - 1
-    path: solution/
+    path: solution/feedback_solution
 
-
+# Two phases: development phase to try many submissions,
+# and final phase to test on fresh data and avoid overfitting.
 phases:
-  - name: Development Phase
+  - index: 0
+    name: Development Phase
     description: 'Development phase: tune your models.'
-    start: 8-7-2019
-    end: 9-30-2019
+    start: 1-1-2026
+    end: 12-31-2026
     tasks:
       - 0
-  - name: Testing Phase
+    starting_kit: starting_kit
+    public_data: public_data
+  - index: 1
+    name: Testing Phase
     description: 'Final Phase: test against unseen data.'
     max_submissions: 1
-    start: 10-1-2019
-    end: 12-31-2019
+    start: 1-1-2027
+    # never end
     tasks:
       - 1
 
+# Leaderboard columns defitinion
+# The keys selected here must be coherent with the scoring program
 leaderboards:
   - title: Results
     key: main
+    submission_rule: "Force_Last" # Add the last submission made to the leaderboard
     columns:
       - title: Prediction score
         key: accuracy
         index: 0
         sorting: desc
+
+# Learn more about competition.yaml settings here:
+# https://docs.codabench.org/latest/Organizers/Benchmark_Creation/Competition-Bundle-Structure/
