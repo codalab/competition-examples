@@ -14,3 +14,7 @@ This repository contains competition bundle examples for [CodaLab Competitions](
 ### Tutorial: how to organize a challenge on CodaLab Competitions
 
 * [TUTORIAL.md](TUTORIAL.md)
+
+### Tutorial: how to organize a challenge on Codabench
+
+* [Getting Started with Codabench](https://docs.codabench.org/latest/Organizers/Benchmark_Creation/Getting-started-with-Codabench/)
