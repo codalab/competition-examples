@@ -1,5 +1,5 @@
 # This file contains the main settings of the benchmark
-# Learn more here: https://github.com/codalab/codabench/wiki/Yaml-Structure
+# Learn more here: https://docs.codabench.org/latest/Organizers/Benchmark_Creation/Yaml-Structure/
 title: Mini-AutoML
 version: 2 # this means that it is a Codabench bundle
 description: AutoML Benchmark template with submission to multiple datasets

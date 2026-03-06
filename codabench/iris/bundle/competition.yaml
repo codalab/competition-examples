@@ -1,5 +1,5 @@
 # The Yaml file contains the main parameters describing the challenge.
-# You can learn more about the possible settings here: # More options here: https://github.com/codalab/codabench/wiki/Yaml-Structure
+# You can learn more about the possible settings here: # More options here: https://docs.codabench.org/latest/Organizers/Benchmark_Creation/Yaml-Structure/
 
 # Main settings
 version: 2 # this means that it is a Codabench bundle
