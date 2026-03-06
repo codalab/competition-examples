@@ -23,6 +23,7 @@ phases:
     description: GPU Test Phase
     start: 2025-06-01
     end: 2026-06-01
+    starting_kit: sample_code_submission
     tasks:
       - 0
 
