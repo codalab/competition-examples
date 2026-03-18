@@ -24,23 +24,27 @@ def get_prediction_data():
     return np.genfromtxt(os.path.join(input_dir, 'testing_data'))
 
 
+def print_line():
+    print('-' * 10)
+
+
 def main():
     from model import Model
     print('Reading Data')
     X_train, y_train = get_training_data()
     X_test = get_prediction_data()
-    print('-' * 10)
+    print_line()
     print('Starting')
     start = time.time()
     m = Model()
-    print('-' * 10)
+    print_line()
     print('Training Model')
     m.fit(X_train, y_train)
-    print('-' * 10)
+    print_line()
     print('Running Prediction')
     prediction = m.predict(X_test)
     duration = time.time() - start
-    print('-' * 10)
+    print_line()
     print(f'Completed Prediction. Total duration: {duration}')
     np.savetxt(os.path.join(output_dir, 'prediction'), prediction)
     with open(os.path.join(output_dir, 'metadata.json'), 'w+') as f:

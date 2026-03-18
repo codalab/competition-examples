@@ -4,7 +4,7 @@ title: Classify Wheat Seeds (result submission)
 description: Classification of wheat seeds into three classes based on seven dimensions of data
 image: wheat.jpg
 registration_auto_approve: True  # do not require approval from admin to join the comp
-docker_image: codalab/codalab-legacy:py39 # the Docker image in which submissions are run
+docker_image: codalab/codalab-legacy:py312 # the Docker image in which submissions are run
 
 # Documentation pages accessible by the participants
 terms: pages/terms.md
