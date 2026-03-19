@@ -1,0 +1,2 @@
+command: python3 /app/program/score.py --solution_dir=/app/input/ref/ --prediction_dir=/app/input/res/ --score_dir=/app/output/
+description: Compute scores for the competition

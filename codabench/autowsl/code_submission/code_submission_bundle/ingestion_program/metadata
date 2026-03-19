@@ -1,0 +1,1 @@
+command: python3 /app/program/ingestion.py --dataset_dir=/app/input_data/ --output_dir=/app/output/ --ingestion_program_dir=/app/program/ --code_dir=/app/ingested_program/ --score_dir=/app/output/ --temp_dir=/app/output/

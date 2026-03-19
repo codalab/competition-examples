@@ -1,0 +1,68 @@
+version: 2
+title: 'AutoWSL Challenge with Dataset Submission'
+description: Create a fully Automated Deep Learning solution for Text Categorization.
+docker_image: vergilgxw/autotable:v2
+image: logo.png
+registration_auto_approve: True
+
+
+pages:
+  - title: credits
+    file: credits.html
+  - title: data
+    file: data.html
+  - title: evaluation
+    file: evaluation.html
+  - title: help
+    file: help.html
+  - title: overview
+    file: overview.html
+
+
+terms: terms.html
+
+
+tasks:
+  - index: 0
+    name: First Task
+    input_data: input_data_1/
+    reference_data: reference_data_1.zip
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+  - index: 1
+    name: Second Task
+    input_data: input_data_2/
+    reference_data: reference_data_2.zip
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+  - index: 2
+    name: Third Task
+    input_data: input_data_3/
+    reference_data: reference_data_3.zip
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+
+
+phases:
+  - name: Single Phase with Multiple Task
+    description: 'Development phase: tune your models and submit prediction results, trained model, or untrained model.'
+    start: 1-1-2026
+    # never end
+    tasks:
+      - 0
+      - 1
+      - 2
+
+
+leaderboards:
+  - title: Results
+    key: main
+    columns:
+      - title: Prediction score
+        key: accuracy
+        index: 0
+        sorting: desc
+      - title: Duration
+        key: duration
+        index: 1
+        sorting: desc

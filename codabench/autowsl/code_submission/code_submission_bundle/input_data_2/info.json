@@ -1,0 +1,27 @@
+{
+    "task": "noisy",
+    "time_budget": 60,
+    "schema": {
+        "n_1": "num",
+        "n_2": "num",
+        "n_3": "num",
+        "n_4": "num",
+        "n_5": "num",
+        "n_6": "num",
+        "n_7": "num",
+        "n_8": "num",
+        "n_9": "num",
+        "n_10": "num",
+        "n_11": "num",
+        "n_12": "num",
+        "n_13": "num",
+        "n_14": "num",
+        "n_15": "num",
+        "n_16": "num",
+        "n_17": "num",
+        "n_18": "num",
+        "n_19": "num",
+        "n_20": "num"
+    },
+    "pred_time_budget": 10
+}
