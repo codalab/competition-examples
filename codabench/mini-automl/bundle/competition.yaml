@@ -5,7 +5,7 @@ version: 2 # this means that it is a Codabench bundle
 description: AutoML Benchmark template with submission to multiple datasets
 image: logo.png
 registration_auto_approve: True  # do not require approval from organizers to join
-docker_image: codalab/codalab-legacy:py39 # the Docker image in which submissions are run
+docker_image: codalab/codalab-legacy:py312 # the Docker image in which submissions are run
 enable_detailed_results: True
 
 # Documentation web pages
