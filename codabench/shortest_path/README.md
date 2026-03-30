@@ -1,6 +1,6 @@
 # Shortest Path on Weighted Graph (SPoWG) Challenge
 
-![logo](bundle/logo.png)
+<img src="bundle/logo.png" width="350" alt="logo">
 
 Shortest Path on Weighted Graph (SPoWG) is a benchmark template for Codabench, featuring code submission to solve an optimization problem on graphs.
 
