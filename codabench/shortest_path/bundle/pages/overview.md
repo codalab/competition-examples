@@ -12,7 +12,7 @@ This benchmark is intentionally simple and is meant as an example of an optimiza
 
 For each graph in the dataset, your algorithm must output one path from the source node to the target node.
 
-![figure](example_shortest_path.png)
+<img src="https://raw.githubusercontent.com/codalab/competition-examples/refs/heads/master/codabench/shortest_path/bundle/pages/example_shortest_path.png" width="400" alt="figure">
 
 ## Evaluation
 

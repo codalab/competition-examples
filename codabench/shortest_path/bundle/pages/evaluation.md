@@ -18,8 +18,8 @@ The final score is the average path cost over all graphs. Lower cost is better.
 
 In the "detailed results" of each submission, you can find a figure reporting the cost score for each graph:
 
-![figure](figure_score_1.png)
+<img src="https://raw.githubusercontent.com/codalab/competition-examples/refs/heads/master/codabench/shortest_path/bundle/pages/figure_score_1.png" width="600" alt="figure">
 
 Penalty are displayed in red:
 
-![figure](figure_score_2.png)
+<img src="https://raw.githubusercontent.com/codalab/competition-examples/refs/heads/master/codabench/shortest_path/bundle/pages/figure_score_2.png" width="600" alt="figure">
