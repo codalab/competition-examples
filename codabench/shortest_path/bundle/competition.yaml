@@ -1,0 +1,86 @@
+# Main settings of the competition
+version: 2
+title: Shortest Path on Weighted Graph (SPoWG)
+description: Optimization problem - Find the shortest path on a weighted graph
+image: logo.png
+registration_auto_approve: True  # do not require approval from admin to join the comp
+docker_image: codalab/codalab-legacy:py312 # the Docker image in which submissions are run
+enable_detailed_results: True # detailed results can be used to display figures and logs associated to each submission
+
+# Documentation pages accessible by the participants
+terms: pages/terms.md
+pages:
+  - title: Overview
+    file: pages/overview.md
+  - title: Participation
+    file: pages/participate.md
+  - title: Data
+    file: pages/data.md
+  - title: Evaluation
+    file: pages/evaluation.md
+
+# In this competition, a task consists in 4 elements:
+# - input data: the 10 graphs data to be solved
+# - reference data: actually the input data, to be accessed by the scoring program
+# - ingestion program: program reading the code submitted by a participant
+# - scoring program: program scoring the proposed paths.
+# You can edit the programs to compute any evaluation procedure.
+tasks:
+  - index: 0
+    name: SPoWG Feedback Task
+    description: 'Test against the 10 public graphs'
+    input_data: dev_phase/input_data/
+    reference_data: dev_phase/input_data/
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+  - index: 1
+    name: SPoWG Final Task
+    description: 'Test against 10 private graphs'
+    input_data: final_phase/input_data/
+    reference_data: final_phase/input_data/
+    ingestion_program: ingestion_program/
+    scoring_program: scoring_program/
+
+# Solution is actually an example submission
+# You can use only the starting kit instead
+solutions: []
+
+# Two phases: development phase to try many submissions,
+# and final phase to test on fresh data and avoid overfitting.
+phases:
+  - index: 0
+    name: Development Phase
+    description: 'Development phase: tune your models.'
+    start: 1-1-2026
+    end: 12-31-2026
+    tasks:
+      - 0
+    starting_kit: starting_kit
+    public_data: public_data
+  - index: 1
+    name: Testing Phase
+    description: 'Final Phase: test against unseen data.'
+    max_submissions: 1
+    start: 1-1-2027
+    # never end
+    tasks:
+      - 1
+
+# Leaderboard columns defitinion
+# The keys selected here must be coherent with the scoring program
+leaderboards:
+  - title: Results
+    key: main
+    submission_rule: "Force_Last" # Add the last submission made to the leaderboard
+    columns:
+      - title: Average Cost
+        key: score
+        index: 0
+        sorting: asc
+      - title: Duration
+        key: duration
+        index: 1
+        sorting: asc
+
+# Learn more about competition.yaml settings here:
+# https://docs.codabench.org/latest/Organizers/Benchmark_Creation/Competition-Bundle-Structure/
