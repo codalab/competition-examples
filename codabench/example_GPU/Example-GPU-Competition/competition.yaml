@@ -6,8 +6,8 @@ version: 2
 title: Example GPU Competition
 description: This is an example GPU test competition
 image: logo.png
-registration_auto_approve: False   
-enable_detailed_results: True
+registration_auto_approve: True   
+enable_detailed_results: False
 docker_image: codalab/codalab-legacy:gpu310
 
 
@@ -21,9 +21,8 @@ phases:
   - index: 0
     name: Phase 1
     description: GPU Test Phase
-    start: 2025-06-01
-    end: 2026-06-01
-    starting_kit: sample_code_submission
+    start: 2026-01-01
+    end: 2027-06-01
     tasks:
       - 0
 

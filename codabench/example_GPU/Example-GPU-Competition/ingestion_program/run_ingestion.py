@@ -43,8 +43,6 @@ if __name__ == "__main__":
         output_dir = "/app/output"
         program_dir = "/app/program"
 
-    sys.path.append(program_dir)
-
     ingestion = Ingestion()
     ingestion.check_gpu_availability()
     ingestion.save_gpu_status(output_dir)
