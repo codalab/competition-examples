@@ -8,7 +8,7 @@ title: Iris
 description: The well known Iris dataset from Fisher's classic paper (Fisher, 1936).
 image: logo.png
 registration_auto_approve: True  # do not require approval from admin to join the comp
-docker_image: 'codalab/codalab-legacy:py37'
+docker_image: codalab/codalab-legacy:py312 # the Docker image in which submissions are run
 
 # Documentation web pages
 terms: pages/terms.html
@@ -42,6 +42,9 @@ tasks:
   reference_data: reference_data/test
   scoring_program: scoring_program
   ingestion_program: ingestion_program
+
+# Solution is an example submission, NOT the ground truth
+# You can leave it empty and give example submissions in the starting kit
 solutions: []
 
 # There are 2 phases: development phase and final phase
@@ -59,7 +62,6 @@ phases:
   execution_time_limit: 500
   tasks:
   - 0
-  solutions: []
   starting_kit: starting_kit
   public_data: input_data
 - index: 1
@@ -73,7 +75,6 @@ phases:
   execution_time_limit: 500
   tasks:
   - 1
-  solutions: []
 
 # Leaderboard
 leaderboards:

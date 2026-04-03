@@ -1,6 +1,6 @@
-# Iris
+# Iris competition bundle
 
-### Codabench competition bundle
+<img src="bundle/logo.png" width="300" alt="logo">
 
 This is a collection of files containing the `competition.yaml` which defines different aspects and attributes of the competition, the logo, the html pages documenting the competition, and the data associated with it. The goal is to provide a ready-to-use template for competition creation on [Codabench](https://github.com/codalab/codabench).
 
@@ -14,5 +14,3 @@ References and credits:
   * Paper: R. A. Fisher. The use of multiple measurements in taxonomic problems. Annual Eugenics, 7, Part II, 179-188 (1936). 
 * The competition protocol was designed by Isabelle Guyon. 
 * The competition bundle was adapted to Codalab V2 by Adrien Pavao.
-
-![logo](bundle/logo.png)

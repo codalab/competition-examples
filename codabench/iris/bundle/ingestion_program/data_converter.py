@@ -16,6 +16,7 @@ import numpy as np
 from scipy.sparse import *
 from sklearn.datasets import load_svmlight_file
 import os
+
 # Note: to check for nan values np.any(map(np.isnan,X_train))
 def file_to_array (filename, verbose=False):
     ''' Converts a file to a list of list of STRING
