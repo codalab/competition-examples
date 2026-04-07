@@ -7,7 +7,7 @@ title: Mini-MNIST Digit Classification
 description: A mini-MNIST challenge with 20 training images per class and 5 test images per class.
 image: logo.png
 registration_auto_approve: True
-docker_image: codalab/codalab-legacy:py39
+docker_image: codalab/codalab-legacy:py312
 
 terms: pages/terms.md
 pages:  
