@@ -1,0 +1,45 @@
+# Mini-MNIST Challenge Bundle
+# Created by: Ihsan Ullah
+# Created on: Apr 05, 2026
+
+version: 2
+title: Mini-MNIST Digit Classification
+description: A mini-MNIST challenge with 20 training images per class and 5 test images per class.
+image: logo.png
+registration_auto_approve: True
+docker_image: codalab/codalab-legacy:py39
+
+terms: pages/terms.md
+pages:  
+  - title: Overview
+    file: pages/overview.md
+  - title: Evaluation
+    file: pages/evaluation.md
+
+phases:
+  - index: 0
+    name: Competition Phase
+    description: Train on 20 images/class and predict on 5 images/class.
+    start: 2026-01-01
+    end: 2027-01-01
+    tasks:
+      - 0
+
+tasks:
+  - index: 0
+    name: MNIST Classification Task
+    description: Classify 50 handwritten digits (5 per class).
+    input_data: input_data/
+    reference_data: reference_data/  
+    scoring_program: scoring_program/
+    ingestion_program: ingestion_program/
+
+leaderboards:
+  - index: 0 
+    title: Results
+    key: main_leaderboard
+    submission_rule: "Force_Latest_Multiple"
+    columns:
+      - index: 0
+        title: Accuracy
+        key: score
