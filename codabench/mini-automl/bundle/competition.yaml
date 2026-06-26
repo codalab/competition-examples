@@ -100,11 +100,11 @@ leaderboards:
   key: Results
   submission_rule: "Force_Last"
   columns:
-      - title: Average Accuracy
-        key: avg_accuracy
+      - title: Average Rank
+        key: avg_rank
         index: 0
-        sorting: desc
-        computation: avg
+        sorting: asc
+        computation: avg_rank
         computation_indexes:
           - 1
           - 2
