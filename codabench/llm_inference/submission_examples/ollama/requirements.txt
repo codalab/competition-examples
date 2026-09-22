@@ -1,0 +1,6 @@
+# Python client (pinned so the chat/pull API cannot change mid-competition) and
+# zstandard, which submission.py uses to extract the ollama server tarball --
+# apt is unusable on the worker (no setuid caps + EOL Ubuntu 20.04 repos), so
+# the server binary is installed without install.sh, from pip-provided tools only.
+ollama==0.6.2
+zstandard==0.25.0

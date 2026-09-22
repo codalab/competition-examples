@@ -4,6 +4,7 @@ Example bundles for Codabench
 Examples of benchmarks directed to beginning organizers.
 
 * AutoWSL, involving several possible setups (multiple tasks, code submission, dataset submission)
+* LLM Inference, participants bring their own inference backend (Transformers, vLLM, Ollama, llama.cpp), code submission, GPU
 * Iris, benchmark with two phases, code submission or results submission
 * Mini-AutoML, two phases, multiple tasks, blind code submission
 * Shortest Path, optimization problem on graphs, code submission
