@@ -1,0 +1,4 @@
+# huggingface_hub is pinned < 1.0: llama-cpp-python's `Llama.from_pretrained`
+# relies on the pre-1.0 hf_hub_download API, and the current hub release is 1.x.
+llama-cpp-python>=0.2.80
+huggingface_hub==0.26.2

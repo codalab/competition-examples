@@ -1,0 +1,13 @@
+# The codalab/codalab-legacy:gpu310 image ships torch 2.3.1 (CUDA 12.4, py3.10),
+# so `torch` below is already satisfied and is left unpinned on purpose.
+# The rest are pinned to versions that work with torch 2.3.1:
+#   - transformers >= 5.0 requires torch >= 2.4 and silently disables its torch
+#     backend on 2.3.1 (AutoModelForCausalLM then fails at call time).
+#   - transformers 4.46.x requires huggingface_hub < 1.0.
+#   - torch 2.3.1 is not compatible with numpy 2.x.
+# Bump these together only if you also move to an image with a newer torch.
+torch
+transformers==4.46.3
+huggingface_hub==0.26.2
+accelerate==1.1.1
+numpy<2

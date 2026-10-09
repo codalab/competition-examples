@@ -1,0 +1,8 @@
+{"id": "q1", "prediction": "The capital of France is Paris.", "latency": 0.42}
+{"id": "q2", "prediction": "2 + 2 = 4", "latency": 0.31}
+{"id": "q3", "prediction": "Romeo and Juliet was written by William Shakespeare.", "latency": 0.55}
+{"id": "q4", "prediction": "The chemical symbol for water is H2O.", "latency": 0.38}
+{"id": "q5", "prediction": "There are 7 continents on Earth.", "latency": 0.4}
+{"id": "q6", "prediction": "Mars is known as the Red Planet.", "latency": 0.36}
+{"id": "q7", "prediction": "The largest ocean is the Pacific Ocean.", "latency": 0.47}
+{"id": "q8", "prediction": "The first Moon landing was in 1969.", "latency": 0.5}

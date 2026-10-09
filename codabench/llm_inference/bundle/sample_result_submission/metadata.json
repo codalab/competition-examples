@@ -1,0 +1,5 @@
+{
+    "model_name": "SmolLM2-135M-Instruct",
+    "hf_repo_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "num_predictions": 8
+}

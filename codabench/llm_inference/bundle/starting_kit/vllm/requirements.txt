@@ -1,0 +1,6 @@
+# NOTE: vLLM pins and installs its own torch build, which will replace the
+# torch 2.3.1 that ships in the codalab/codalab-legacy:gpu310 image. That is a
+# large download and must match the worker's CUDA driver (12.4) -- pin a vllm
+# release you have verified on your queue rather than tracking latest.
+vllm==0.6.3
+huggingface_hub==0.26.2

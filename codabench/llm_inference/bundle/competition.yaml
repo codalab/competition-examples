@@ -1,0 +1,79 @@
+# Example "bring your own backend" LLM Inference competition.
+# The participant submits two files: requirements.txt + submission.py.
+# submission.py defines a `Submission` class that loads an LLM (from any
+# inference library: transformers, vLLM, Ollama, llama.cpp, ...) and answers
+# prompts. The ingestion program installs the requirements, runs inference on
+# hidden prompts, and the scoring program evaluates the answers.
+
+version: 2
+title: LLM Inference
+description: Submit requirements.txt + submission.py using any inference library (transformers, vLLM, Ollama, llama.cpp) to run an LLM on a GPU worker.
+image: logo.png
+registration_auto_approve: True
+enable_detailed_results: True
+# GPU-enabled image. The ingestion program installs the submission's
+# requirements.txt at runtime, so any backend can be used.
+#
+# Custom worker images (one active at a time). For available worker
+# Dockerfiles, see https://github.com/codalab/codalab-dockers/tree/master/Dockerfiles
+# The stock image below is fine for Transformers submissions.
+# For other backends, build & push the matching image and set it here:
+#   vLLM      -> moujar/codabench-gpu-vllm:0.6.3
+#   llama.cpp -> moujar/codabench-llama_cpp:0.1
+#   Ollama    -> moujar/codabench-gpu-ollama:0.32.0  (required for Ollama:
+#     the stock image cannot apt-install anything — no setuid caps + EOL
+#     Ubuntu 20.04 repos — so otherwise every Ollama run re-downloads 1.4 GB)
+docker_image: moujar/codabench-gpu-vllm:0.6.3
+
+terms: pages/terms.md
+pages:
+  - title: Overview
+    file: pages/overview.md
+  - title: Evaluation
+    file: pages/evaluation.md
+
+phases:
+  - index: 0
+    name: Phase 1
+    description: LLM inference phase
+    start: 2026-01-01
+    end: 2027-06-01
+    tasks:
+      - 0
+
+tasks:
+  - index: 0
+    name: LLM-Inference
+    description: Run an LLM with the inference backend of your choice on the hidden prompts.
+    input_data: input_data
+    reference_data: reference_data
+    scoring_program: scoring_program/
+    ingestion_program: ingestion_program/
+
+solutions:
+  - index: 0
+    tasks:
+      - 0
+    path: sample_code_submission/
+
+leaderboards:
+  - index: 0
+    title: Results
+    key: main
+    submission_rule: "Force_Latest_Multiple"
+    columns:
+      - index: 0
+        title: Accuracy
+        key: accuracy
+        sorting: desc
+      - index: 1
+        title: Token F1
+        key: f1
+        sorting: desc
+      - index: 2
+        title: Avg latency (s)
+        key: avg_latency
+        sorting: asc
+      - index: 3
+        title: Model
+        key: model_name

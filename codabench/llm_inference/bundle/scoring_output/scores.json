@@ -1,0 +1,6 @@
+{
+    "accuracy": 1.0,
+    "f1": 0.3685,
+    "avg_latency": 0.4238,
+    "model_name": "SmolLM2-135M-Instruct"
+}
